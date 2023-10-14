@@ -1,0 +1,12 @@
+django==4.2.1
+psycopg2-binary==2.9.3
+Pillow==9.3.0
+django-phonenumber-field[phonenumbers]
+PyYAML==6.0
+django-debug-toolbar==3.2.4
+boto3==1.18.63
+django-storages==1.13.2
+amqp==5.1.1
+requests==2.31.0
+django-autoslug==1.9.8
+
