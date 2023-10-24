@@ -1,0 +1,20 @@
+{% load static %}
+<section id="card-cover">    
+    <div class="container">
+        <img src="{{user.cover}}" alt="Hola Prueba" class="img-cover">
+        <div class="card-bg-up ">
+            <div class="photo-position">
+                <img class="photo-img" src={{user.photo}} alt="Hola Prueba">
+            </div>
+        </div>
+        <div class="container card-bg-down bg-primario">
+            <div class="row">
+                <div class="col">
+                    <h2 class="color-acento">{{user.name}}</h2>
+                    <h5>{{user.role}}</h5>
+                    <p>{{user.bio}}</p>
+                </div>
+            </div>
+        </div>
+    </div>   
+</section>

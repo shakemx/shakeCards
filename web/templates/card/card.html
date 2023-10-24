@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+<!--SEO-->
+{% block title %}Card{% endblock title %}
+{% block description %}Card{% endblock description %}
+{% block titleop %}Card{% endblock titleop %}
+{% block description_op %}Card{% endblock description_op %}
+
+<!--Body-->
+{% block main_body_data %}
+{% include "card/cover.html" %}
+{% include "card/favs.html" %}
+{% include "card/company.html" %}
+{% include "card/banner_company.html" %}
+{% include "card/services.html" %}
+{% include "card/call.html" %}
+{% include "card/utilities.html" %}
+{% include "card/share.html" %}
+
+
+
+
+
+
+
+
+
+
+<!----------------END CARD---------------------->
+
+{% endblock %}
+
+
+<!--JS-->
+{% block child_js_above_files %}
+{% endblock %}
+
+{% block child_js_below_files %}
+{% endblock %}

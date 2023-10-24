@@ -1,0 +1,20 @@
+{% load static %}
+<section id="card-favs">
+    <div class="container ">
+        <div class="row">
+            <div class="col">
+                <ul id="list-fav" class="text-center">
+                    <li><a href="{{user.company.contact.web}}" target="_blank"><img src="{% static 'img/card/web.png' %}" alt=""
+                                class="img-fav"></a></li>
+                     {% for t in user.tool.all %}
+                    <li><a href="{{t.url}}" target="_blank"><img src="{{t.logo}}" alt=""
+                        class="img-fav"></a></li>
+                    {% endfor %}                    
+                    <li><a href="https://wa.me/{{user.contact.whatsapp}}" target="_blank"><img src="{% static 'img/card/whats.png' %}" alt=""
+                        class="img-fav"></a></li>
+                   
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

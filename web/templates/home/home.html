@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% load static %}
+
+<!--SEO-->
+{% block title %}Card{% endblock title %}
+{% block description %}Card{% endblock description %}
+{% block titleop %}Card{% endblock titleop %}
+{% block description_op %}Card{% endblock description_op %}
+
+<!--Body-->
+{% block main_body_data %}
+<video type="video/mp.4" src="{% static 'video/16x9.mp4' %}" autoplay muted playsinline loop style="width: 100vw; height:100vh; object-fit: cover; position: absolute; top: 0; left: 0;" class="d-md-block d-none"></video>
+<video type="video/mp.4" src="{% static 'video/9x16.mp4' %}" autoplay muted playsinline loop style="width: 100vw; height:100vh; object-fit: cover; position: absolute; top: 0; left: 0;"  class="d-block d-md-none"></video>
+
+
+
+
+
+
+
+
+
+
+
+<!----------------END CARD---------------------->
+
+{% endblock %}
+
+
+<!--JS-->
+{% block child_js_above_files %}
+{% endblock %}
+
+{% block child_js_below_files %}
+{% endblock %}

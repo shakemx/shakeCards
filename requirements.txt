@@ -9,4 +9,5 @@ django-storages==1.13.2
 amqp==5.1.1
 requests==2.31.0
 django-autoslug==1.9.8
+django-qr-code==3.1.1   
 

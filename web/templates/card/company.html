@@ -1,0 +1,20 @@
+{% load static %}
+<section id="card-company">
+    <div class="container bg-card">
+        <div class="row">
+            <div class="col-12 col-md-4 offset-md-4 text-center">
+                <img src="{{user.company.logo}}" alt="" class="img-logo">
+            </div>
+            <div class="col-12 col-md-4 d-flex align-items-center ">
+                <ul class="text-md-end tool-list ms-auto">
+
+                    {% for t in user.company.tool.all %}
+                    <li><a href="" target="_blank"><img src="{{t.logo}}" alt=""
+                        class="tool-container"></a></li>
+                    {% endfor %}    
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
