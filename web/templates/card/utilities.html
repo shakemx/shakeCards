@@ -2,11 +2,10 @@
 <section id="card-utilities">
    <div class="container fix-bottom py-3">
       <div class="d-flex justify-content-around align-content-center">
-         <a data-bs-toggle="modal" data-bs-target="#modal-share"><i class="fa-solid fa-user share"></i></a>
-         <a data-bs-toggle="modal" data-bs-target="#modal-share"><i class="fa-solid fa-location-dot share"></i></a>
-         <a data-bs-toggle="modal" data-bs-target="#modal-share"><i class="fa-solid fa-download share"></i></a>
-         <a data-bs-toggle="modal" data-bs-target="#modal-share"><i class="fa-solid fa-share share"></i></a>
-         <a data-bs-toggle="modal" data-bs-target="#modal-share"><i class="fa-solid fa-star share"></i></a>
+         <a data-bs-toggle="modal" data-bs-target="#modal-user"><i class="fa-solid fa-user icon-utility"></i></a>
+         <a data-bs-toggle="modal" data-bs-target="#modal-map"><i class="fa-solid fa-location-dot icon-utility"></i></a>
+         <a href="{% url 'vcard' user.slug %}"><i class="fa-solid fa-download icon-utility"></i></a>
+         <a data-bs-toggle="modal" data-bs-target="#modal-share"><i class="fa-solid fa-share icon-utility"></i></a>
       </div>
    </div>
 </section>

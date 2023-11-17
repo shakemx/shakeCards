@@ -2,6 +2,7 @@ from django.contrib import admin
 
 from company.models import Company
 from contact.models import Card
+from tool.models import Utility
 
 class CompanyAdmin(admin.ModelAdmin):
     list_display = ('name', 'is_active')
@@ -13,6 +14,12 @@ class CompanyAdmin(admin.ModelAdmin):
         if db_field.name == "card":
             kwargs["queryset"] = Card.objects.filter(is_active=True, type='COMPANY')
         return super().formfield_for_foreignkey(db_field, request, **kwargs)
+
+    def formfield_for_manytomany(self, db_field, request, **kwargs):
+        if db_field.name == 'tool':
+            kwargs['queryset'] = Utility.objects.filter(is_active=True, type=Utility.COMPANY)
+        return super().formfield_for_manytomany(db_field, request, **kwargs)
+
 
     actions=['activate', 'deactivate']
 

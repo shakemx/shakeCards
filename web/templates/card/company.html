@@ -3,13 +3,13 @@
     <div class="container bg-card">
         <div class="row">
             <div class="col-12 col-md-4 offset-md-4 text-center">
-                <img src="{{user.company.logo}}" alt="" class="img-logo">
+                <img src="{{user.company.logo}}" alt="{{user.company.name}}" class="img-logo">
             </div>
             <div class="col-12 col-md-4 d-flex align-items-center ">
                 <ul class="text-md-end tool-list ms-auto">
 
                     {% for t in user.company.tool.all %}
-                    <li><a href="" target="_blank"><img src="{{t.logo}}" alt=""
+                    <li><a href="" target="_blank"><img src="{{t.logo}}" alt="{{t.name}}"
                         class="tool-container"></a></li>
                     {% endfor %}    
                     

@@ -5,18 +5,20 @@
       <div class="row gx-0  align-items-center box">
          
          <div class="col-12 service-box py-3">
-            <img src="{{s.logo}}" alt="" class="img-services p-0">
+            <img src="{{s.logo}}" alt="{{s.name}}" class="img-services p-0">
             <h3 class="livvic mt-3">{{s.title}}</h3>
-            <a href="#service-detail" data-bs-toggle="collapse" role="button" aria-expanded="false"
+            <a href="#service-detail-{{s.id}}" data-bs-toggle="collapse" role="button" aria-expanded="false"
                aria-controls="Service">
                <i class="fa-solid fa-angle-down fa-lg more"></i>
             </a>
          </div>
              
-      </div>   
-      <div class="col-12 service-detail collapse text-center" id="service-detail">
-         <p class=" mt-3">{{s.decription}}</p>
-      </div>      
+      </div> 
+      <div class="row gx-0 service-detail collapse align-items-center" id="service-detail-{{s.id}}"> 
+         <div class="col-12  text-center" >
+            <p class=" mt-3">{{s.decription}}</p>
+         </div>    
+      </div>
       {% endfor %} 
    </div>
 </section>

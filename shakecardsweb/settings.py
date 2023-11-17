@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'qr_code',
     'debug_toolbar',
+    'colorfield',
     'base',
     'company',
     'contact',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
     'tool',
     'user',
     'web',
+    'colorTemplate'
 ]
 
 MIDDLEWARE = [

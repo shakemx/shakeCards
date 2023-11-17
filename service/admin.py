@@ -19,3 +19,5 @@ class ServiceAdmin(admin.ModelAdmin):
     deactivate.short_description='Desactivar Servicio'
 
 admin.site.register(Service, ServiceAdmin)
+
+

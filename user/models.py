@@ -5,7 +5,6 @@ from autoslug import AutoSlugField
 from base.models import BaseModel
 from contact.models import Card
 from tool.models import Utility
-from company.models import Company
 
 
 class User(BaseModel):
@@ -16,7 +15,6 @@ class User(BaseModel):
     bio = models.TextField('Biografía', max_length=500)
     tool = models.ManyToManyField(Utility, 'Utilerías', blank=True)
     contact = models.ForeignKey(Card, on_delete=models.CASCADE, verbose_name='Contacto')
-    company = models.ForeignKey(Company, on_delete=models.CASCADE, verbose_name='Empresa')
     slug = AutoSlugField(populate_from='name', unique=True, always_update=False)
 
     class Meta:
