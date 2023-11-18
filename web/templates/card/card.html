@@ -3,16 +3,17 @@
 {% load static %}
 
 <!--SEO-->
-{% block title %}Card{% endblock title %}
-{% block description %}Card{% endblock description %}
-{% block titleop %}Card{% endblock titleop %}
-{% block description_op %}Card{% endblock description_op %}
+{% block title %}{{user.name}}{% endblock title %}
+{% block description %}{{user.role}}{% endblock description %}
+{% block titleop %}{{user.name}}{% endblock titleop %}
+{% block description_op %}{{user.role}}{% endblock description_op %}
+{% block favicon %}{{company.logo}}{% endblock favicon%}
 
 <!--Body-->
 {% block main_body_data %}
 {% include "card/cover.html" %}
 {% include "card/favs.html" %}
-{% include "card/company.html" %}
+{% include "card/card_company.html" %}
 {% include "card/banner_company.html" %}
 {% include "card/services.html" %}
 {% include "card/call.html" %}
@@ -24,7 +25,8 @@
 {% include "card/modal/modal-share.html" %}
 {% include "card/modal/modal-favs.html" %}
 
-
+<!--Styles-->
+{% include "color/sass.html" %}
 
 
 

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block append_head %}
+<style>
+:root {
+    {% if company.color %}
+    --bg-main: {{company.color.bg_main}};
+    --text-main: {{company.color.text_main}};
+    --text-secondary: {{company.color.text_secondary}};
+    --company-main: {{company.color.company_main}};
+    --company-icono: {{company.color.company_icon}};
+    --company-secondary: {{company.color.company_secondary}};
+    --icon-main: {{company.color.icono_main}};
+    --icon-secondary: {{company.color.icono_secondary}};
+    {% endif %}
+}
+</style>
+{% endblock append_head %}

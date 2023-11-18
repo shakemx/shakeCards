@@ -17,27 +17,26 @@ def home(request):
         return render(request, 'home/home.html') 
     return redirect('home')
 
-def company(request):
+def company(request, slug):
     if request.method == 'GET':
-        
-        return render(request, 'company/company.html')
+        company = get_object_or_404(Company, slug=slug)
+        users = User.objects.filter(company=company, is_active=True)
+        ctx = {
+            'company': company,
+            'users': users,
+        }
+        return render(request, 'company/company.html',context=ctx)
     return redirect('home')
 
 def card(request, slug):
     if request.method == 'GET':
-        company = Company.objects.filter(is_active=True).first()
-        contact = Card.objects.filter(is_active=True)
-        tool = Utility.objects.filter(is_active=True)
-        user = User.objects.prefetch_related('company', 'contact').filter(is_active=True, slug=slug).first()
-        service = Service.objects.filter(is_active=True)
+        user = User.objects.filter(slug=slug).first()
+        company = Company.objects.prefetch_related('user').first()
         ctx = {
-            'company': company,
-            'contact': contact,
-            'tool': tool,
             'user': user,
-            'service': service
+            'company': company,
         }
-        return render(request, 'card/card.html', ctx) 
+        return render(request, 'card/card.html', context=ctx) 
     return redirect('home')
 
 def vcard(request, slug):

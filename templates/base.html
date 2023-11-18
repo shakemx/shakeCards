@@ -8,6 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}{% endblock title%}</title>
   <meta name="description" content="{% block description %}{% endblock description %}" />
+  <link rel="icon" type="image/png" href="{% block favicon %}{% endblock favicon%}" />
   <!-- FONT AWESOME CONTENT VALUES -->
   <script src="https://kit.fontawesome.com/2844112c82.js" crossorigin="anonymous"></script>
   <!-- BOOTSTRAP CSS -->
@@ -24,6 +25,8 @@
   <link rel="stylesheet" href="{% static 'css/estilos.css' %}" />
   <!--JQUERY-->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  {% block append_head %}
+  {% endblock append_head %}
 </head>
 
 <body>
