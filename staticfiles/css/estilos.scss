@@ -1,0 +1,403 @@
+//--------------------------
+// BASE STYLES
+//--------------------------
+
+$bg-main : var(--bg-main,#fffffe);
+$text-main : var(--text-main,#2b2c34);
+$text-secondary : var(--text-secondary ,#fffffe);
+$company-main: var(--company-main,#6246ea);
+$company-icono: var(--company-icono,#d1d1e9);
+$company-secondary: var(--company-secondary, #d1d1e9);
+$icon-main: var(--icon-main,#fffffe);
+$icon-secondary: var(--icon-secondary,#6246ea);
+
+@font-face {
+  font-family: "HelveticaNowDisplay-Regular";
+  src: local("HelveticaNowDisplay-Regular"),
+    url("../fonts/HelveticaNowDisplay-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "LeagueSpartan-VariableFont_wght";
+  src: local("LeagueSpartan-VariableFont_wght"),
+    url("../fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Cocomat-pro-regular";
+  src: local("Cocomat-pro-regular"),
+    url("../fonts/Cocomat-pro-regular.ttf") format("truetype");
+}
+
+//---------------------------------------
+// BODY STYLES
+//---------------------------------------
+
+body {
+  font-family: "HelveticaNowDisplay-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.helvetica {
+  font-family: "HelveticaNowDisplay-Regular";
+}
+
+.spartan {
+  font-family: "LeagueSpartan-VariableFont_wght";
+}
+
+.livvic {
+  font-family: "Cocomat-pro-regular";
+}
+
+html {
+  font-size: 14px;  
+}
+body {
+  background-color: $bg-main;
+  color: $text-main;
+}
+
+h2 {
+  font-family: "LeagueSpartan-VariableFont_wght";
+} 
+
+a {
+  text-decoration: none;
+  color: $text-main!important;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 5px;
+}
+
+li {
+  margin-top: 0.5rem;
+}
+
+
+//---------------------------------------
+// COVER STYLES
+//---------------------------------------
+
+#card-cover{
+  .img-cover {
+    height: 45vh;
+    width: 100%;
+  }
+
+  .photo-position {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 45%;
+    transform: translate(0px, -50%);
+    text-align: center;
+  }
+
+  .photo-img {
+    border-radius: 50%;
+    width: 300px !important;
+    height: 300px !important;
+    margin: 0.2rem 0.3rem;
+  }
+
+  .card{
+    border-radius: 50%!important;
+    width: 80px!important;
+  }
+  .card-bg-up {
+    height: 160px;
+    background-color: $bg-main;
+  }
+  .card-bg-down {
+    text-align: center;
+    padding: 0rem 15rem;
+    background-color: $bg-main;
+  }
+
+
+@media only screen and (max-width: 992px) {
+  .img-cover {
+    height: 30vh;
+  }
+  .card-bg-down {
+    padding: 0rem 10rem;
+  }
+  .photo-position {
+    top: 30%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .img-cover {
+    height: 40vh;
+  }
+  .photo-position {
+    top: 40%;
+  }
+  .card-bg-down {
+    padding: 0rem 10rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .img-cover {
+    height: 35vh;
+  }    
+  .photo-position {
+    top: 35%;
+  }
+  .photo-img {
+    border-radius: 10px;
+    border: 5px solid $bg-main;
+    width: 150px !important;
+    height: 150px !important;
+  }
+  .card-bg-up {
+    height: 80px;
+  }
+  .card-bg-down {
+    padding: 0rem 1rem;
+  }  
+}
+
+}
+
+
+
+#card-favs{
+  height: 130px;
+  object-position: center;
+  #list-fav li{
+    display: inline-block;
+  }
+  img:hover {
+    cursor: pointer;
+  }
+  .img-fav{
+    width: 120px;
+    height: auto;
+    margin: 0 5px;
+    background-color: $bg-main;
+  }
+  @media only screen and (max-width: 768px) {
+    height: 100px;
+    .img-fav{
+      width: 60px;
+      height: auto;
+    }
+  }
+}
+
+
+#card-company{
+  .bg-card{
+    background-color: $company-main;
+  }
+  .img-logo{
+    width: 300px;
+    height: auto;
+  }
+  .tool-container{
+    border-radius: 10px;
+    background-color: $company-icono;
+    padding: 5px;
+    max-width: 60px !important;
+    max-height: 60px !important;
+    margin: 0.2rem 0.3rem;
+  }
+  @media only screen and (max-width: 576px) {
+    .img-logo{
+      width: 200px;
+    }
+    .tool-container{
+      max-width: 40px !important;
+      max-height: 40px !important;
+      margin: 0.1rem 0.2rem;
+    }
+    .tool-list li{
+      display: inline-block;
+    }
+  }
+}
+
+#card-banner{
+  .banner{
+    position: relative;
+  }
+  .img-banner{
+    height: 300px;
+    width: 100%;
+    filter: opacity( 50%);
+    -webkit-filter: opacity(50%);
+  }
+  .slogan{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    bottom:50%;
+    text-align: center;
+    color: $text-main;
+  }  
+
+  @media only screen and (max-width: 992px) {
+    .img-banner {
+        height: 150px;        
+    }
+    .slogan{
+    top: 10%;
+   }
+  }
+}
+
+#card-services{
+  .box{
+    background-color: $company-secondary;
+    height: 150px;
+  }
+  .service-box, i{
+    text-align: center;
+    color: $text-main;   
+  }
+  .service-detail{
+    text-align: center;
+  }
+  .img-services{
+    width: 30px;
+    height: 30px;
+  }
+  .more{
+    color: $text-main;
+  }
+  @media only screen and (max-width: 992px) {
+    .img-services {
+      display: none;        
+    }
+    .box{
+      height: 100px;
+    }
+   }
+  }
+
+  #card-call{
+    padding-bottom: 95px;
+    
+    .banner-call{
+      text-align: center; 
+    }
+    .company-call{
+      background-color: $company-main;
+      color: $text-secondary;   
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      transition: all 0.5s ease-in-out;
+      font-family: "LeagueSpartan-VariableFont_wght";
+      transition: all 0.5s ease-in-out; 
+    }
+    .company-call:hover{
+      opacity: 0.8;
+      transition: all 0.5s ease-in-out;
+    }
+    a{
+      color: $text-secondary!important;
+    }
+  }
+
+  #card-utilities{
+    .fix-bottom{
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0%;
+      right: 0%;
+      background-color: $company-main;
+      padding: 5px;
+    }
+    .img-utilities{
+      width: 60px;
+      height: auto;
+    }
+    .img-utilities:hover{
+      cursor: pointer;
+    }
+    .icon-utility {
+      font-size: 3rem!important;
+      color: $icon-main!important;
+    }
+    .icon-utility:hover {
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 768px) {
+      .img-utilities {
+        width: 40px;
+        height: auto;
+      }
+    }
+  }
+
+
+  //------------------------------
+  // MODAL UTILITIES
+  //------------------------------
+
+  #modal-share, #modal-user, #modal-map, #modal-download, #modal-favs{
+    .modal-content{
+      border: none!important;
+      border-radius: 15px!important;
+      border-color: transparent!important;
+      background-color: $company-secondary!important;
+      height: 100%;
+    }  
+    .modal-body{
+    background-color: $company-secondary!important;
+    border-radius: 15px!important;
+    border-color: transparent!important;
+    color: $text-secondary!important;
+    height: 100%;
+    }
+    .icon{
+      color: $text-main;
+      font-size: 75px;
+    }
+    .icon-small{
+      color: $icon-secondary;
+      font-size: 40px;
+    }
+    a,h3,h2{
+      color: $icon-secondary!important;
+    }
+
+    // a{
+    //   background-color: $services_text;
+    //   color: $client_contrast!important;   
+    //   border: none;
+    //   border-radius: 10px;
+    //   padding: 10px;
+    //   transition: all 0.5s ease-in-out;
+    //   font-family: "LeagueSpartan-VariableFont_wght";
+    //   transition: all 0.5s ease-in-out; 
+    // }
+    // a:hover{
+    //   background-color: $client_contrast; 
+    //   color:  $services_text; 
+    //   transition: all 0.5s ease-in-out;
+    // }
+
+    }
+
+ 
+  
+
+
+
+  

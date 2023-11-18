@@ -159,3 +159,5 @@ else:
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+INTERNAL_IPS = type(str('c'), (), {'__contains__': lambda *a: True})()
+

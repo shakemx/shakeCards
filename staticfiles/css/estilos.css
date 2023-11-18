@@ -1,0 +1,252 @@
+@font-face {
+  font-family: "HelveticaNowDisplay-Regular";
+  src: local("HelveticaNowDisplay-Regular"), url("../fonts/HelveticaNowDisplay-Regular.ttf") format("truetype"); }
+@font-face {
+  font-family: "LeagueSpartan-VariableFont_wght";
+  src: local("LeagueSpartan-VariableFont_wght"), url("../fonts/LeagueSpartan-VariableFont_wght.ttf") format("truetype"); }
+@font-face {
+  font-family: "Cocomat-pro-regular";
+  src: local("Cocomat-pro-regular"), url("../fonts/Cocomat-pro-regular.ttf") format("truetype"); }
+body {
+  font-family: "HelveticaNowDisplay-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px; }
+
+body::-webkit-scrollbar {
+  display: none; }
+
+.helvetica {
+  font-family: "HelveticaNowDisplay-Regular"; }
+
+.spartan {
+  font-family: "LeagueSpartan-VariableFont_wght"; }
+
+.livvic {
+  font-family: "Cocomat-pro-regular"; }
+
+html {
+  font-size: 14px; }
+
+body {
+  background-color: var(--bg-main, #fffffe);
+  color: var(--text-main, #2b2c34); }
+
+h2 {
+  font-family: "LeagueSpartan-VariableFont_wght"; }
+
+a {
+  text-decoration: none;
+  color: var(--text-main, #2b2c34) !important; }
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px 5px; }
+
+li {
+  margin-top: 0.5rem; }
+
+#card-cover .img-cover {
+  height: 45vh;
+  width: 100%; }
+#card-cover .photo-position {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 45%;
+  -webkit-transform: translate(0px, -50%);
+          transform: translate(0px, -50%);
+  text-align: center; }
+#card-cover .photo-img {
+  border-radius: 50%;
+  width: 300px !important;
+  height: 300px !important;
+  margin: 0.2rem 0.3rem; }
+#card-cover .card {
+  border-radius: 50% !important;
+  width: 80px !important; }
+#card-cover .card-bg-up {
+  height: 160px;
+  background-color: var(--bg-main, #fffffe); }
+#card-cover .card-bg-down {
+  text-align: center;
+  padding: 0rem 15rem;
+  background-color: var(--bg-main, #fffffe); }
+@media only screen and (max-width: 992px) {
+  #card-cover .img-cover {
+    height: 30vh; }
+  #card-cover .card-bg-down {
+    padding: 0rem 10rem; }
+  #card-cover .photo-position {
+    top: 30%; } }
+@media only screen and (max-width: 768px) {
+  #card-cover .img-cover {
+    height: 40vh; }
+  #card-cover .photo-position {
+    top: 40%; }
+  #card-cover .card-bg-down {
+    padding: 0rem 10rem; } }
+@media only screen and (max-width: 576px) {
+  #card-cover .img-cover {
+    height: 35vh; }
+  #card-cover .photo-position {
+    top: 35%; }
+  #card-cover .photo-img {
+    border-radius: 10px;
+    border: 5px solid var(--bg-main, #fffffe);
+    width: 150px !important;
+    height: 150px !important; }
+  #card-cover .card-bg-up {
+    height: 80px; }
+  #card-cover .card-bg-down {
+    padding: 0rem 1rem; } }
+
+#card-favs {
+  height: 130px;
+  -o-object-position: center;
+     object-position: center; }
+  #card-favs #list-fav li {
+    display: inline-block; }
+  #card-favs img:hover {
+    cursor: pointer; }
+  #card-favs .img-fav {
+    width: 120px;
+    height: auto;
+    margin: 0 5px;
+    background-color: var(--bg-main, #fffffe); }
+  @media only screen and (max-width: 768px) {
+    #card-favs {
+      height: 100px; }
+      #card-favs .img-fav {
+        width: 60px;
+        height: auto; } }
+
+#card-company .bg-card {
+  background-color: var(--company-main, #6246ea); }
+#card-company .img-logo {
+  width: 300px;
+  height: auto; }
+#card-company .tool-container {
+  border-radius: 10px;
+  background-color: var(--company-icono, #d1d1e9);
+  padding: 5px;
+  max-width: 60px !important;
+  max-height: 60px !important;
+  margin: 0.2rem 0.3rem; }
+@media only screen and (max-width: 576px) {
+  #card-company .img-logo {
+    width: 200px; }
+  #card-company .tool-container {
+    max-width: 40px !important;
+    max-height: 40px !important;
+    margin: 0.1rem 0.2rem; }
+  #card-company .tool-list li {
+    display: inline-block; } }
+
+#card-banner .banner {
+  position: relative; }
+#card-banner .img-banner {
+  height: 300px;
+  width: 100%;
+  filter: opacity(50%);
+  -webkit-filter: opacity(50%); }
+#card-banner .slogan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+  text-align: center;
+  color: var(--text-main, #2b2c34); }
+@media only screen and (max-width: 992px) {
+  #card-banner .img-banner {
+    height: 150px; }
+  #card-banner .slogan {
+    top: 10%; } }
+
+#card-services .box {
+  background-color: var(--company-secondary, #d1d1e9);
+  height: 150px; }
+#card-services .service-box, #card-services i {
+  text-align: center;
+  color: var(--text-main, #2b2c34); }
+#card-services .service-detail {
+  text-align: center; }
+#card-services .img-services {
+  width: 30px;
+  height: 30px; }
+#card-services .more {
+  color: var(--text-main, #2b2c34); }
+@media only screen and (max-width: 992px) {
+  #card-services .img-services {
+    display: none; }
+  #card-services .box {
+    height: 100px; } }
+
+#card-call {
+  padding-bottom: 95px; }
+  #card-call .banner-call {
+    text-align: center; }
+  #card-call .company-call {
+    background-color: var(--company-main, #6246ea);
+    color: var(--text-secondary, #fffffe);
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    font-family: "LeagueSpartan-VariableFont_wght";
+    transition: all 0.5s ease-in-out; }
+  #card-call .company-call:hover {
+    opacity: 0.8;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out; }
+  #card-call a {
+    color: var(--text-secondary, #fffffe) !important; }
+
+#card-utilities .fix-bottom {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0%;
+  right: 0%;
+  background-color: var(--company-main, #6246ea);
+  padding: 5px; }
+#card-utilities .img-utilities {
+  width: 60px;
+  height: auto; }
+#card-utilities .img-utilities:hover {
+  cursor: pointer; }
+#card-utilities .icon-utility {
+  font-size: 3rem !important;
+  color: var(--icon-main, #fffffe) !important; }
+#card-utilities .icon-utility:hover {
+  cursor: pointer; }
+@media only screen and (max-width: 768px) {
+  #card-utilities .img-utilities {
+    width: 40px;
+    height: auto; } }
+
+#modal-share .modal-content, #modal-user .modal-content, #modal-map .modal-content, #modal-download .modal-content, #modal-favs .modal-content {
+  border: none !important;
+  border-radius: 15px !important;
+  border-color: transparent !important;
+  background-color: var(--company-secondary, #d1d1e9) !important;
+  height: 100%; }
+#modal-share .modal-body, #modal-user .modal-body, #modal-map .modal-body, #modal-download .modal-body, #modal-favs .modal-body {
+  background-color: var(--company-secondary, #d1d1e9) !important;
+  border-radius: 15px !important;
+  border-color: transparent !important;
+  color: var(--text-secondary, #fffffe) !important;
+  height: 100%; }
+#modal-share .icon, #modal-user .icon, #modal-map .icon, #modal-download .icon, #modal-favs .icon {
+  color: var(--text-main, #2b2c34);
+  font-size: 75px; }
+#modal-share .icon-small, #modal-user .icon-small, #modal-map .icon-small, #modal-download .icon-small, #modal-favs .icon-small {
+  color: var(--icon-secondary, #6246ea);
+  font-size: 40px; }
+#modal-share a, #modal-share h3, #modal-share h2, #modal-user a, #modal-user h3, #modal-user h2, #modal-map a, #modal-map h3, #modal-map h2, #modal-download a, #modal-download h3, #modal-download h2, #modal-favs a, #modal-favs h3, #modal-favs h2 {
+  color: var(--icon-secondary, #6246ea) !important; }
+
+/*# sourceMappingURL=estilos.css.map */
