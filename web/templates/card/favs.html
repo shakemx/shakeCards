@@ -1,19 +1,13 @@
 {% load static %}
 <section id="card-favs">
     <div class="container ">
-        <div class="row">
-            <div class="col">
-                <ul id="list-fav" class="text-center">
-                    <li><a href="{{user.company.contact.web}}" target="_blank"><img src="{% static 'img/card/web.png' %}" alt="Sitio Web Empresa"
-                                class="img-fav"></a></li>
-                     {% for t in user.tool.all %}
-                    <li><a href="{{t.url}}" target="_blank"><img src="{{MEDIA_URL}}{{t.logo}}" alt="{{t.name}}"
-                        class="img-fav"></a></li>
-                    {% endfor %}                    
-                    <li><a href="https://wa.me/{{user.contact.whatsapp}}" target="_blank"><img src="{% static 'img/card/whats.png' %}" alt="Whatsapp Personal"
-                        class="img-fav"></a></li>                   
-                </ul>
-            </div>
+        <div class="d-flex justify-content-center align-content-center wall-favs">
+            <a href="{{user.company.contact.web}}" target="_blank"><i class="fa-solid fa-link"></i></a>
+            {% for t in tool.all %}
+            <a href="{{t.url}}" target="_blank"><i class="{{t.icon.icon}}"></i></a>
+            {% endfor %}                    
+            <a href="https://wa.me/{{user.contact.whatsapp}}" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>                               
+             
         </div>
     </div>
 </section>

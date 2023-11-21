@@ -3,7 +3,7 @@ from django.contrib import admin
 from tool.models import Utility
 
 class UtilityAdmin(admin.ModelAdmin):
-    list_display = ('name', 'type')
+    list_display = ('name', 'type','is_active')
     list_filter = ('name','type', )
     search_fields = ('name', )
     ordering = ('name', )

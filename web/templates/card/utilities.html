@@ -4,7 +4,9 @@
       <div class="d-flex justify-content-around align-content-center">
          <a data-bs-toggle="modal" data-bs-target="#modal-user"><i class="fa-solid fa-user icon-utility"></i></a>
          <a data-bs-toggle="modal" data-bs-target="#modal-map"><i class="fa-solid fa-location-dot icon-utility"></i></a>
+         {% if user %}
          <a href="{% url 'vcard' user.slug %}"><i class="fa-solid fa-download icon-utility"></i></a>
+         {% endif %}
          <a data-bs-toggle="modal" data-bs-target="#modal-share"><i class="fa-solid fa-share icon-utility"></i></a>
       </div>
    </div>

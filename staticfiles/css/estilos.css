@@ -42,7 +42,7 @@ a {
 ul {
   list-style: none;
   padding: 0;
-  margin: 5px 5px; }
+  margin: 0; }
 
 li {
   margin-top: 0.5rem; }
@@ -89,11 +89,11 @@ li {
     padding: 0rem 10rem; } }
 @media only screen and (max-width: 576px) {
   #card-cover .img-cover {
-    height: 35vh; }
+    height: 20vh; }
   #card-cover .photo-position {
-    top: 35%; }
+    top: 20%; }
   #card-cover .photo-img {
-    border-radius: 10px;
+    border-radius: 100px;
     border: 5px solid var(--bg-main, #fffffe);
     width: 150px !important;
     height: 150px !important; }
@@ -103,46 +103,51 @@ li {
     padding: 0rem 1rem; } }
 
 #card-favs {
-  height: 130px;
-  -o-object-position: center;
-     object-position: center; }
+  height: 100%; }
   #card-favs #list-fav li {
     display: inline-block; }
-  #card-favs img:hover {
+  #card-favs .wall-favs {
+    padding: 10px 0;
+    overflow-x: scroll; }
+  #card-favs i {
+    font-size: 75px !important;
+    color: var(--icon-main, #2B2C34) !important;
+    margin: 0 15px; }
+  #card-favs i:hover {
     cursor: pointer; }
-  #card-favs .img-fav {
-    width: 120px;
-    height: auto;
-    margin: 0 5px;
-    background-color: var(--bg-main, #fffffe); }
   @media only screen and (max-width: 768px) {
-    #card-favs {
-      height: 100px; }
-      #card-favs .img-fav {
-        width: 60px;
-        height: auto; } }
+    #card-favs i {
+      font-size: 40px !important; } }
 
 #card-company .bg-card {
-  background-color: var(--company-main, #6246ea); }
+  background-color: var(--company-main, #6246ea);
+  height: 350px; }
 #card-company .img-logo {
   width: 300px;
-  height: auto; }
-#card-company .tool-container {
-  border-radius: 10px;
-  background-color: var(--company-icono, #d1d1e9);
-  padding: 5px;
-  max-width: 60px !important;
-  max-height: 60px !important;
-  margin: 0.2rem 0.3rem; }
+  height: auto;
+  padding: 0;
+  margin: 0; }
+#card-company li {
+  background-color: var(--company-secondary, #d1d1e9);
+  text-align: center;
+  border-radius: 15px; }
+#card-company i {
+  font-size: 45px !important;
+  color: var(--company-icono, #d1d1e9) !important;
+  margin: 5px 5px; }
+#card-company i:hover {
+  cursor: pointer; }
 @media only screen and (max-width: 576px) {
+  #card-company .bg-card {
+    height: 250px; }
   #card-company .img-logo {
-    width: 200px; }
-  #card-company .tool-container {
-    max-width: 40px !important;
-    max-height: 40px !important;
-    margin: 0.1rem 0.2rem; }
-  #card-company .tool-list li {
-    display: inline-block; } }
+    width: 120px; }
+  #card-company li {
+    border-radius: 10px; }
+  #card-company i {
+    font-size: 30px !important;
+    color: var(--company-icono, #d1d1e9) !important;
+    margin: 5px 5px; } }
 
 #card-banner .banner {
   position: relative; }
@@ -163,26 +168,45 @@ li {
   #card-banner .img-banner {
     height: 150px; }
   #card-banner .slogan {
-    top: 10%; } }
+    top: 20%; } }
 
 #card-services .box {
   background-color: var(--company-secondary, #d1d1e9);
   height: 150px; }
+#card-services .btn-primary {
+  border: none;
+  height: 150px;
+  vertical-align: middle;
+  background-color: var(--company-secondary, #d1d1e9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+#card-services .btn-primary:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-filter: brightness(0.95);
+          filter: brightness(0.95);
+  --webkit-filter: brightness(.95); }
 #card-services .service-box, #card-services i {
   text-align: center;
   color: var(--text-main, #2b2c34); }
 #card-services .service-detail {
   text-align: center; }
-#card-services .img-services {
-  width: 30px;
-  height: 30px; }
 #card-services .more {
   color: var(--text-main, #2b2c34); }
+#card-services .icon-services {
+  font-size: 35px !important;
+  color: var(--icon-services, #6246ea) !important;
+  margin: 5px 5px; }
 @media only screen and (max-width: 992px) {
-  #card-services .img-services {
-    display: none; }
-  #card-services .box {
-    height: 100px; } }
+  #card-services h3 {
+    font-size: 1.4rem; }
+  #card-services .icon-services {
+    font-size: 20px !important;
+    margin: 2px; } }
 
 #card-call {
   padding-bottom: 95px; }
@@ -220,13 +244,16 @@ li {
   cursor: pointer; }
 #card-utilities .icon-utility {
   font-size: 3rem !important;
-  color: var(--icon-main, #fffffe) !important; }
+  color: var(--icon-utilities, #fffffe) !important; }
 #card-utilities .icon-utility:hover {
   cursor: pointer; }
 @media only screen and (max-width: 768px) {
   #card-utilities .img-utilities {
     width: 40px;
-    height: auto; } }
+    height: auto; }
+  #card-utilities .icon-utility {
+    font-size: 2rem !important;
+    color: var(--icon-utilities, #fffffe) !important; } }
 
 #modal-share .modal-content, #modal-user .modal-content, #modal-map .modal-content, #modal-download .modal-content, #modal-favs .modal-content {
   border: none !important;

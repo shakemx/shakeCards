@@ -1,6 +1,7 @@
 from django.db import models
 
 from base.models import BaseModel
+from colorTemplate.models import Icon
 
 
 class Service(BaseModel):
@@ -8,6 +9,7 @@ class Service(BaseModel):
     title = models.CharField('Título', max_length=50, blank=False, null=False)
     decription = models.TextField('Descripción', blank=False, null=False, max_length=500)
     logo = models.ImageField('Logo - Servicio', blank=True)
+    icon = models.ForeignKey(Icon, on_delete=models.CASCADE, blank=True, null=True) 
 
 
     class Meta:

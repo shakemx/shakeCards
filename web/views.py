@@ -4,10 +4,7 @@ import vobject
 from django.http import HttpResponse
 
 from company.models import Company
-from contact.models import Card
-from tool.models import Utility
 from user.models import User
-from service.models import Service 
 
 # Create your views here.
 
@@ -20,7 +17,7 @@ def home(request):
 def company(request, slug):
     if request.method == 'GET':
         company = get_object_or_404(Company, slug=slug)
-        users = User.objects.filter(company=company, is_active=True)
+        users = User.objects.prefetch_related('tool').filter(company=company, is_active=True)
         ctx = {
             'company': company,
             'users': users,
@@ -30,13 +27,20 @@ def company(request, slug):
 
 def card(request, slug):
     if request.method == 'GET':
-        user = User.objects.filter(slug=slug).first()
-        company = Company.objects.prefetch_related('user').first()
-        ctx = {
-            'user': user,
-            'company': company,
-        }
-        return render(request, 'card/card.html', context=ctx) 
+        user = User.objects.prefetch_related('tool').filter(slug=slug,is_active=True).first()
+        if user:
+            company = Company.objects.prefetch_related('user').first()
+            tool = user.tool.prefetch_related('icon').filter(is_active=True)
+            tool_company = company.tool.prefetch_related('icon').filter(is_active=True)
+            ctx = {
+                'user': user,
+                'company': company,
+                'tool': tool,
+                'tool_company': tool_company,
+            }
+            return render(request, 'card/card.html', context=ctx) 
+        else:
+            return redirect('home')
     return redirect('home')
 
 def vcard(request, slug):

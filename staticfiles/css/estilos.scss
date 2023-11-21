@@ -8,8 +8,10 @@ $text-secondary : var(--text-secondary ,#fffffe);
 $company-main: var(--company-main,#6246ea);
 $company-icono: var(--company-icono,#d1d1e9);
 $company-secondary: var(--company-secondary, #d1d1e9);
-$icon-main: var(--icon-main,#fffffe);
+$icon-main: var(--icon-main,#2B2C34);
 $icon-secondary: var(--icon-secondary,#6246ea);
+$icon-services: var(--icon-services,#6246ea);
+$icon-utilities: var(--icon-utilities,#fffffe);
 
 @font-face {
   font-family: "HelveticaNowDisplay-Regular";
@@ -74,7 +76,7 @@ a {
 ul {
   list-style: none;
   padding: 0;
-  margin: 5px 5px;
+  margin: 0;
 }
 
 li {
@@ -149,13 +151,13 @@ li {
 
 @media only screen and (max-width: 576px) {
   .img-cover {
-    height: 35vh;
+    height: 20vh;
   }    
   .photo-position {
-    top: 35%;
+    top: 20%;
   }
   .photo-img {
-    border-radius: 10px;
+    border-radius: 100px;
     border: 5px solid $bg-main;
     width: 150px !important;
     height: 150px !important;
@@ -170,28 +172,27 @@ li {
 
 }
 
-
-
 #card-favs{
-  height: 130px;
-  object-position: center;
+  height: 100%;
   #list-fav li{
     display: inline-block;
   }
-  img:hover {
+  .wall-favs{
+    padding: 10px 0 ;
+    overflow-x: scroll;
+  }
+  i {
+    font-size: 75px!important;
+    color: $icon-main!important;
+    margin: 0 15px;
+  }
+  i:hover {
     cursor: pointer;
   }
-  .img-fav{
-    width: 120px;
-    height: auto;
-    margin: 0 5px;
-    background-color: $bg-main;
-  }
   @media only screen and (max-width: 768px) {
-    height: 100px;
-    .img-fav{
-      width: 60px;
-      height: auto;
+
+    i{
+      font-size: 40px!important;
     }
   }
 }
@@ -200,32 +201,44 @@ li {
 #card-company{
   .bg-card{
     background-color: $company-main;
+    height: 350px;
   }
   .img-logo{
     width: 300px;
     height: auto;
+    padding: 0;
+    margin: 0;
   }
-  .tool-container{
-    border-radius: 10px;
-    background-color: $company-icono;
-    padding: 5px;
-    max-width: 60px !important;
-    max-height: 60px !important;
-    margin: 0.2rem 0.3rem;
+  li{
+    background-color: $company-secondary;
+    text-align: center;
+    border-radius: 15px;    
+  }
+  i {
+    font-size: 45px!important;
+    color: $company-icono!important;
+    margin:  5px 5px;
+  }
+  i:hover {
+    cursor: pointer;
   }
   @media only screen and (max-width: 576px) {
+    .bg-card{
+      height: 250px;
+    }
     .img-logo{
-      width: 200px;
+      width: 120px;
+    }    
+    li{
+      border-radius: 10px;
     }
-    .tool-container{
-      max-width: 40px !important;
-      max-height: 40px !important;
-      margin: 0.1rem 0.2rem;
-    }
-    .tool-list li{
-      display: inline-block;
+    i {
+      font-size: 30px!important;
+      color: $company-icono!important;
+      margin:  5px 5px;
     }
   }
+ 
 }
 
 #card-banner{
@@ -250,18 +263,32 @@ li {
 
   @media only screen and (max-width: 992px) {
     .img-banner {
-        height: 150px;        
+    height: 150px;        
     }
     .slogan{
-    top: 10%;
+    top: 20%;
    }
   }
 }
 
 #card-services{
-  .box{
+  .box {
     background-color: $company-secondary;
+    height: 150px; 
+  }
+  .btn-primary{
+    border: none;
     height: 150px;
+    vertical-align: middle;
+    background-color: $company-secondary;
+    display: flex;
+    align-items: center;
+  }
+  .btn-primary:focus{
+    box-shadow: none;
+    filter: brightness(.95);
+    --webkit-filter: brightness(.95);
+    
   }
   .service-box, i{
     text-align: center;
@@ -270,22 +297,26 @@ li {
   .service-detail{
     text-align: center;
   }
-  .img-services{
-    width: 30px;
-    height: 30px;
-  }
   .more{
     color: $text-main;
   }
+  .icon-services {
+    font-size: 35px!important;
+    color: $icon-services!important;
+    margin:  5px 5px;
+  }  
   @media only screen and (max-width: 992px) {
-    .img-services {
-      display: none;        
+    h3{
+      font-size: 1.4rem;
     }
-    .box{
-      height: 100px;
-    }
+    .icon-services {
+      font-size: 20px!important;
+      margin:  2px;
+    }  
+
    }
-  }
+   
+ }
 
   #card-call{
     padding-bottom: 95px;
@@ -331,7 +362,7 @@ li {
     }
     .icon-utility {
       font-size: 3rem!important;
-      color: $icon-main!important;
+      color: $icon-utilities!important;
     }
     .icon-utility:hover {
       cursor: pointer;
@@ -341,6 +372,10 @@ li {
       .img-utilities {
         width: 40px;
         height: auto;
+      }
+      .icon-utility {
+        font-size: 2rem!important;
+        color: $icon-utilities!important;
       }
     }
   }

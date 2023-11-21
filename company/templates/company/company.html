@@ -7,11 +7,14 @@
 {% block description %}{{company.slogan}}{% endblock description %}
 {% block titleop %}{{company.name}}{% endblock titleop %}
 {% block description_op %}{{company.slogan}}{% endblock description_op %}
+{% block image_op %}{{company.logo}}{% endblock image_op %}
 {% block favicon %}{{company.logo}}{% endblock favicon%}
+
 
 <!--Body-->
 {% block main_body_data %}
 {% include "company/list.html" %}
+
 
 <!----------------END CARD---------------------->
 
