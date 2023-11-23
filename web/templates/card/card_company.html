@@ -16,7 +16,7 @@
             <div class="col-1 offset-3 d-flex align-items-center">
                 <ul class="ms-auto">
                     {% for t in tool_company.all %}
-                    <li><a href="" target="_blank"></a><i class="{{t.icon.icon}}"></i></li>
+                    <li><a href="{{t.company.tool.url}}" target="_blank"></a><i class="{{t.icon.icon}}"></i></li>
                     {% endfor %}                        
                 </ul>
             </div>         
@@ -29,7 +29,7 @@
             <div class="col-4 d-flex align-items-center ">
                 <ul class="text-md-end tool-list ms-auto">
                     {% for t in tool_company.all %}
-                    <li><a href="" target="_blank"></a><i class="{{t.icon.icon}}"></i></li>
+                    <li><a href="{{t.company.tool.url}}" target="_blank"></a><i class="{{t.icon.icon}}"></i></li>
                     {% endfor %}                        
                 </ul>
             </div>
