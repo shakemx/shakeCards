@@ -134,20 +134,22 @@ li {
 #card-company i {
   font-size: 45px !important;
   color: var(--company-icono, #d1d1e9) !important;
-  margin: 5px 5px; }
+  margin: 5px 5px;
+  width: 55px !important; }
 #card-company i:hover {
   cursor: pointer; }
 @media only screen and (max-width: 576px) {
   #card-company .bg-card {
-    height: 250px; }
+    height: 200px; }
   #card-company .img-logo {
-    width: 120px; }
+    width: 100px; }
   #card-company li {
     border-radius: 10px; }
   #card-company i {
     font-size: 30px !important;
     color: var(--company-icono, #d1d1e9) !important;
-    margin: 5px 5px; } }
+    margin: 5px 5px;
+    width: 45px !important; } }
 
 #card-banner .banner {
   position: relative; }

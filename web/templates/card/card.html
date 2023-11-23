@@ -8,7 +8,7 @@
 {% block titleop %}{{user.name}}{% endblock titleop %}
 {% block description_op %}{{user.role}}{% endblock description_op %}
 {% block image_op %}{{company.logo}}{% endblock image_op %}
-{% block favicon %}{{company.logo}}{% endblock favicon%}
+{% block favicon %}{% static 'img/favicon.png' %}{% endblock favicon%}
 
 <!--Body-->
 {% block main_body_data %}

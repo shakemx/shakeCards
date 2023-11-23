@@ -2,7 +2,7 @@
 <section id="card-favs">
     <div class="container ">
         <div class="d-flex justify-content-center align-content-center wall-favs">
-            <a href="{{user.company.contact.web}}" target="_blank"><i class="fa-solid fa-link"></i></a>
+            <a href="{{company.contact.web}}" target="_blank"><i class="fa-solid fa-link"></i></a>
             {% for t in tool.all %}
             <a href="{{t.url}}" target="_blank"><i class="{{t.icon.icon}}"></i></a>
             {% endfor %}                    

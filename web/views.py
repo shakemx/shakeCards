@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from datetime import datetime
+from os import environ
 import vobject
 from django.http import HttpResponse
 
@@ -32,11 +32,13 @@ def card(request, slug):
             company = Company.objects.prefetch_related('user').first()
             tool = user.tool.prefetch_related('icon').filter(is_active=True)
             tool_company = company.tool.prefetch_related('icon').filter(is_active=True)
+            qr_user = '{}{}/{}'.format('https://', 'sensum.mx/agente', user.slug)
             ctx = {
                 'user': user,
                 'company': company,
                 'tool': tool,
                 'tool_company': tool_company,
+                'qr_user': qr_user,
             }
             return render(request, 'card/card.html', context=ctx) 
         else:

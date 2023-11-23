@@ -218,16 +218,18 @@ li {
     font-size: 45px!important;
     color: $company-icono!important;
     margin:  5px 5px;
+    width: 55px!important;
   }
   i:hover {
     cursor: pointer;
   }
+ 
   @media only screen and (max-width: 576px) {
     .bg-card{
-      height: 250px;
+      height: 200px;
     }
     .img-logo{
-      width: 120px;
+      width: 100px;
     }    
     li{
       border-radius: 10px;
@@ -236,7 +238,9 @@ li {
       font-size: 30px!important;
       color: $company-icono!important;
       margin:  5px 5px;
+      width: 45px!important;
     }
+   
   }
  
 }
