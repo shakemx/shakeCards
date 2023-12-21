@@ -3,7 +3,7 @@
    <div class="container p-0">
       {% for s in company.service.all %}
       <div class="row gx-0 align-content-center box">
-         <a class="btn btn-primary service-box" href="#service-detail-{{s.name}}" data-bs-toggle="collapse" role="button" aria-expanded="false"
+         <a class="btn btn-primary service-box" href="#service-detail-{{s.id}}" data-bs-toggle="collapse" role="button" aria-expanded="false"
                aria-controls="Service">
             <div class="col-12 ">
                <i class="{{s.icon.icon}} icon-services"></i>
@@ -12,7 +12,7 @@
             </div>
          </a>             
       </div> 
-      <div class="row gx-0 service-detail collapse align-items-center" id="service-detail-{{s.name}}"> 
+      <div class="row gx-0 service-detail collapse align-items-center" id="service-detail-{{s.id}}"> 
          <div class="offset-1 col-10  text-center py-3" >
             <p class="livvic my-auto">{{s.title}}</p>
             <h6 class=" my-auto">{{s.decription}}</h6>
