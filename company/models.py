@@ -16,7 +16,7 @@ class Company(BaseModel):
     logo = models.ImageField('Logo - Compañia', blank=False, null=False)
     color = models.ForeignKey(ColorCompany, on_delete=models.CASCADE, verbose_name='Tema',blank=True, null=True)
     cover = models.ImageField('Portada - Compañia', blank=False, null=False)
-    tool = models.ManyToManyField(Utility, 'Utilerias',  blank=True, null=True)
+    tool = models.ManyToManyField(Utility, 'Utilerias',  blank=True)
     contact = models.ForeignKey(Card, on_delete=models.CASCADE, related_name='card')
     service = models.ManyToManyField(Service, verbose_name='Servicios')
     user = models.ManyToManyField(User, verbose_name='Usuarios')

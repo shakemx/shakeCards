@@ -7,14 +7,15 @@
                aria-controls="Service">
             <div class="col-12 ">
                <i class="{{s.icon.icon}} icon-services"></i>
-               <h3 class="livvic mt-3">{{s.title}}</h3>
+               <h3 class="livvic mt-3">{{s.name}}</h3>
                <i class="fa-solid fa-angle-down fa-lg more"></i> 
             </div>
          </a>             
       </div> 
       <div class="row gx-0 service-detail collapse align-items-center" id="service-detail-{{s.name}}"> 
          <div class="offset-1 col-10  text-center py-3" >
-            <p class=" my-auto">{{s.decription}}</p>
+            <p class="livvic my-auto">{{s.title}}</p>
+            <h6 class=" my-auto">{{s.decription}}</h6>
          </div>    
       </div>
       {% endfor %} 
