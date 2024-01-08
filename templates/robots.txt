@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /sensum
+Disallow: /agente
+Disallow: https://coral-app-s2zu3.ondigitalocean.app
+Disallow: https://coral-app-s2zu3.ondigitalocean.app/admin
+
+User-agent: *
+Allow: /
+
+Sitemap: https://sensum.mx/sitemap.xml
