@@ -20,15 +20,21 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.sitemaps.views import sitemap
 from os import environ
+from web.sitemaps import StaticViewSitemap
 
 
 DEBUG = True if environ['DEBUG'] == 'True' else False
+sitemaps = {
+    'static': StaticViewSitemap,
+}
 
 if DEBUG:
     urlpatterns = [
     path('__debug__/', include('debug_toolbar.urls')), 
     path('admin', admin.site.urls),
     path('', include('web.urls')),
+     # SEO
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
 ]  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
         
 else:
@@ -36,4 +42,5 @@ else:
     path('admin', admin.site.urls),
     path('', include('web.urls')),
      # SEO
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
 ] +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

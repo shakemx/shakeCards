@@ -1,6 +1,6 @@
 {% load static %}
 
-<nav class="navbar fixed-top navbar-light bg-nav-init p-0">
+<nav class="navbar fixed-top navbar-light bg-nav-init p-0" id="navSmooth">
     <div class="container" tabindex="9999">
         <a class="navbar-brand" href="{% url 'home'  %}#index" >
             <img src="{% static 'img/logo_light.png' %}" alt="Logo Sensum" class="img_nav"/>
@@ -27,7 +27,13 @@
             <a class="nav-link" href="{% url 'home'  %}#about">Nosotros</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'home'  %}#faqs">Preguntas Frecuentes</a>
+            <a class="nav-link" href="{% url 'home'  %}#services">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home'  %}#why">¿Por que nosotros?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home'  %}#properties">Propiedades</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{% url 'home'  %}#contact">Contacto</a>
@@ -35,3 +41,21 @@
         </ul>
     </div>
 </nav>
+
+<script>
+    $(document).ready(function() {
+
+$(window).scroll(function() {
+
+    var height = $('.first-container').height();
+    var scrollTop = $(window).scrollTop();
+
+    if (scrollTop >= height - 40) {
+        $('.nav-container').addClass('solid-nav');
+    } else {
+        $('.nav-container').removeClass('solid-nav');
+    }
+
+});
+});
+</script>

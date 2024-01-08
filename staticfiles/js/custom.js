@@ -14,3 +14,16 @@ function navbarMotion() {
       toogle.toggleClass("menuHide");
   
   }
+
+// When the user scrolls down 20px from the top of the document, slide down the navbar
+window.onscroll = function() {smoothNav()};
+
+function smoothNav(){
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById('navSmooth').style.backgroundColor = 'rgba(0,0,0,0.1)';
+        document.getElementById('navSmooth').style.transition = '0.5s';     
+    }else{
+        document.getElementById('navSmooth').style.backgroundColor = 'rgba(0,0,0,1)';;
+        document.getElementById('navSmooth').style.transition = '0.5s';
+    } 
+}
