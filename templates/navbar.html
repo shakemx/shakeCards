@@ -1,0 +1,37 @@
+{% load static %}
+
+<nav class="navbar fixed-top navbar-light bg-nav-init p-0">
+    <div class="container" tabindex="9999">
+        <a class="navbar-brand" href="{% url 'home'  %}#index" >
+            <img src="{% static 'img/logo_light.png' %}" alt="Logo Sensum" class="img_nav"/>
+        </a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#listaNav"
+        aria-controls="listaNav"
+        aria-expanded="false"
+        aria-label="Mostrar Menú Navegación"
+        onclick="navbarMotion(); return false;"
+        >
+        <span class="navbar-toggler-icon menuShow" id="menuToogle"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse fixed-bottom showNav mt-3 ml-auto bg-nav" id="listaNav" >
+        <ul class="navbar-nav container" data-bs-dismiss="collapse">
+          <li class="nav-item">
+            <a class="nav-link mt-5" href="{% url 'home'  %}#index">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home'  %}#about">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home'  %}#faqs">Preguntas Frecuentes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home'  %}#contact">Contacto</a>
+          </li>
+        </ul>
+    </div>
+</nav>
