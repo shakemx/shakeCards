@@ -9,6 +9,9 @@
 {% block description_op %}Vendemos tu inmueble en tiempo record{% endblock description_op %}
 {% block image_op %}{% static 'img/favicon.png' %}{% endblock image_op %}
 {% block favicon %}{% static 'img/favicon.png' %}{% endblock favicon%}
+{% block append_head %}
+<link rel="stylesheet" href="{% static 'css/web_page.css' %}" />
+{% endblock append_head %}
 
 <!--Body-->
 {% block main_body_data %}
